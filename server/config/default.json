@@ -1,0 +1,5 @@
+{
+  "serverPort": 9090,
+  "dbUrl": "mongodb+srv://naomi:naomi@naomihouse.gfbtkqt.mongodb.net/?retryWrites=true&w=majority",
+  "secretKey": "secret-key"
+}

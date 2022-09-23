@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import NaomiStorage from "./components/NaomiStorage/NaomiStorage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Page = styled.div`
+  min-height: 100vh;
+  color: white;
+  background-color: rgba(40, 42, 52, 0.83);
+  font-family: 'Inter', sans-serif;
+`
+
+const App = (props) => {
+    return(
+        <BrowserRouter>
+          <Page>
+              <Routes>
+                  <Route path="/" element={<NaomiStorage/>}/>
+              </Routes>
+          </Page>
+        </BrowserRouter>
+    )
 }
 
 export default App;
